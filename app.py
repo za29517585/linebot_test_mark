@@ -23,8 +23,8 @@ app = Flask(__name__)
 # CHANNEL_SECRET = '你的 Channel Secret'
 
 # 為了方便您現在除錯，若沒有設定環境變數，這裡先用空字串避免報錯 (請記得填入)
-line_bot_api = LineBotApi(os.getenv('CHANNEL_ACCESS_TOKEN', '2008636248'))
-handler = WebhookHandler(os.getenv('CHANNEL_SECRET', 'ce9351f86c2d24c1c3b093e8934928e9'))
+line_bot_api = LineBotApi(os.getenv('CHANNEL_ACCESS_TOKEN', 'YOUR_CHANNEL_ACCESS_TOKEN'))
+handler = WebhookHandler(os.getenv('CHANNEL_SECRET', 'YOUR_CHANNEL_SECRET'))
 
 @app.route("/callback", methods=['POST'])
 def callback():
